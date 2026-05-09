@@ -247,7 +247,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-3">
               {[
                 { id: 1, title: 'MRI Scan', desc: 'High-resolution 3T MRI for exceptionally detailed images of organs and tissues.', icon: Brain, img: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600' },
                 { id: 2, title: 'CT Scan', desc: 'Ultrafast multi-slice CT scanning for rapid and precise cross-sectional imaging.', icon: Activity, img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600' },
