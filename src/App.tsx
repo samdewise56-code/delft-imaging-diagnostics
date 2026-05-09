@@ -208,7 +208,7 @@ export default function App() {
         {/* Quick Features Row */}
         <section className="relative z-20 border-b border-x border-slate-200 bg-white">
           <div className="container mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200">
+            <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-slate-200">
               {[
                 { icon: Clock, title: '24/7 Service', desc: 'Round the clock Emergency' },
                 { icon: Building2, title: 'Home Collection', desc: 'Free sample collection' },
@@ -255,20 +255,16 @@ export default function App() {
                 { id: 4, title: 'Digital X-Ray', desc: 'Low-dose digital radiography providing instant high-quality bone and chest imaging.', icon: Activity, img: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=600' },
                 { id: 5, title: 'Pathology Center', desc: 'Fully automated lab equipment for hematology, biochemistry, and microbiology.', icon: Microscope, img: 'https://plus.unsplash.com/premium_photo-1682141246821-57da8410a1ec?q=80&w=2135&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
                 { id: 6, title: 'Cardiology', desc: 'Comprehensive heart care diagnostics including ECG, Echo, and TMT.', icon: Stethoscope, img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600' }
-              ].map((service, i) => (
+              ].map((service) => (
                 <motion.div 
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-50px' }}
-                  transition={{ delay: i * 0.1 }}
                   className="group relative flex flex-col overflow-hidden bg-white border border-slate-200 transition-all hover:bg-slate-50 cursor-pointer"
                 >
-                  <div className="h-48 overflow-hidden border-b border-slate-200 grayscale mix-blend-multiply group-hover:grayscale-0 transition-all duration-500">
+                  <div className="h-48 overflow-hidden border-b border-slate-200">
                     <img 
                       src={service.img} 
                       alt={service.title} 
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                      className="h-full w-full object-cover"
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -317,12 +313,7 @@ export default function App() {
         <section id="about" className="bg-white py-24 border-b border-slate-200">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-              <motion.div 
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
+              <motion.div className="relative">
                 <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none -left-6 -top-6">
                   <div className="w-[400px] h-[400px] border-[20px] border-sky-500"></div>
                 </div>
@@ -330,7 +321,7 @@ export default function App() {
                   <img 
                     src="https://images.unsplash.com/photo-1582719366768-de4481b828ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                     alt="Medical professionals analyzing data" 
-                    className="h-full w-full object-cover aspect-[4/3] grayscale mix-blend-multiply opacity-80"
+                    className="h-full w-full object-cover aspect-[4/3]"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -340,12 +331,7 @@ export default function App() {
                 </div>
               </motion.div>
               
-              <motion.div 
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="space-y-8"
-              >
+              <motion.div className="space-y-8">
                 <div>
                   <div className="w-12 h-1 bg-sky-600 mb-6"></div>
                   <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-slate-900 uppercase">
